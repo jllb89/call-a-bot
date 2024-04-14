@@ -1,0 +1,54 @@
+PENDIENTES VET
+
+Haciéndose:
+- log vets (activo / inactivo)
+- diseño de la web de la llamada
+
+Siguiente:
+
+- enviar mensaje para calificar videollamada
+- si se mandó una liga y no se pagó, mandar mensaje 5 minutos después de follow up
+- términos y condiciones / aviso de privacidad al inicio
+- arreglar página formulario
+- permitir que se pueda compartir pantalla en llamada vonage
+
+Por hacerse:
+
+- mandar lista de postulantes
+- empezar flujo servicio a domicilio
+- usar openai para interpretar el tipo de animal que tiene el usuario
+- admin dashboard
+- enviar email con recibo personalizado
+
+Hecho:
+
+- dar de alta productos
+- hacer formato json
+- script para subir metas
+- agregar meta a base de datos
+- cambiar embed por api en vonage
+- ocultar apikey en url con endpoint
+- programar gpt para que lea toda la conversación y salude con un contexto
+- pedir contexto antes de ofrecer producto
+- webhook
+- crear transactions table con:
+    .payment link URL
+    .the associated product ID
+    .paid status
+    .exact date and time when the paymentLink was paid
+    .the date and time when the paymentLink was generated
+    .a reference to the customer
+- crear customers table con:
+    .correo electrónico proveniente de stripe
+    .nombre
+- matar el link de stripe una vez que se paga
+- matar el link de stripe después de x tiempo
+- quitar palabra mascota
+- disparar mensaje de whatsapp para vet una vez que se genere un link de pago para que esté alerta
+- disparar whatsapp para vet con link para videollamada a partir de que cambie el estado
+- completar stripe oxxo
+- mandar lista de servicios
+- mandar cuenta de tally a josé luis
+
+
+

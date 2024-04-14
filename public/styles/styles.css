@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: titles;
+    src: url(../resources/fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: texts;
+    src: url(../resources/fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: support;
+    src: url(../resources/fonts/Raleway-Light.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(43, 35, 57);
+    background: radial-gradient(circle, rgba(43, 35, 57, 1) 31%, rgba(20, 14, 23, 1) 100%);
+    font-family: texts, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+#videos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#subscriber {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transform: scaleX(-1); /* Horizontally flip the video */
+}
+
+#publisher {
+    position: absolute;
+    width: 9vh; /* Adjusted to a 9:16 aspect ratio */
+    height: 16vh;
+    top: 2rem;
+    right: 2rem;
+    z-index: 3; /* Ensures the small view is above the subscriber */
+}
+
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 4; /* Ensures buttons are on top of all video elements */
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#subscriber, #publisher, .logo {
+    animation: fadeIn 1s ease-out;
+}

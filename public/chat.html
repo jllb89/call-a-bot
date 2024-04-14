@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="./resources/svg/logo.svg" alt="Company Logo" style="width: 10rem; height: auto;">
+        </div>
+                <div id="publisher"></div>
+    </div>
+    <div id="videos">
+        <div id="subscriber"></div>
+    </div>
+    <div class="button-container">
+        <button onclick="toggleMute()">
+            <img src="./resources/svg/mute_off.svg" alt="Toggle Mute" id="muteButton">
+        </button>
+        <button onclick="toggleVideo()">
+            <img src="./resources/svg/camera_on.svg" alt="Toggle Video" id="videoButton">
+        </button>
+        <button onclick="hangUp()">
+            <img src="./resources/svg/hang_up.svg" alt="Hang Up">
+        </button>
+    </div>    
+    <script src="./js/videoCall.js"></script>
+    <script src="./js/buttons.js"></script>
+</body>
+</html>
