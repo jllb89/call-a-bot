@@ -1,3 +1,4 @@
 .env
 config/adminsdk.json
 node_modules/
+pendientes.txt

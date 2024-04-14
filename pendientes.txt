@@ -2,7 +2,6 @@ PENDIENTES VET
 
 Haciéndose:
 - log vets (activo / inactivo)
-- diseño de la web de la llamada
 
 Siguiente:
 
@@ -49,6 +48,8 @@ Hecho:
 - completar stripe oxxo
 - mandar lista de servicios
 - mandar cuenta de tally a josé luis
+- diseño de la web de la llamada
+
 
 
 

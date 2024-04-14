@@ -1,11 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./routes'); // Import the combined routes
+const routes = require('./routes');
 const path = require('path');
 const { fetchProductByName, fetchTransactionByRoomID } = require('./services/firestoreService');
 const OpenTok = require('opentok');
-const webhook = require('./webhook'); // Import the webhook router
+const webhook = require('./webhook');
 const { sendVetPreparationMessage } = require('./controllers/vetsController');
 const { chatState } = require('./controllers/whatsappController.js');
 const app = express();
@@ -14,8 +14,8 @@ const opentok = new OpenTok(process.env.VONAGE_API_KEY, process.env.VONAGE_API_S
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/', routes); // Use the combined routes
-app.use('/webhook', webhook); // Mount the webhook router under /webhook
+app.use('/', routes);
+app.use('/webhook', webhook);
 
 // Status callback endpoint for Twilio message statuses
 app.post('/message-status', (req, res) => {
@@ -96,7 +96,7 @@ app.get('/create-session', (req, res) => {
 
 // Route to get session information with role differentiation
 app.get('/get-session-info', async (req, res) => {
-  const { role, room } = req.query;  // Ensure you are using the correct query parameter key
+  const { role, room } = req.query;
   console.log("Received query params:", req.query);
   console.log(`Parsed roomID from query: '${room}'`);
 

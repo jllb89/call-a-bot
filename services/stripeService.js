@@ -80,8 +80,8 @@ async function createPaymentLink(productId, customerPhoneNumber) {
         console.log(`Generated tokens: userToken: ${userToken}, vetToken: ${vetToken}`);
 
         // Construct the redirect URL for the user and the vet
-        const userRedirectURL = `http://localhost:3000/chat?sessionId=${session.sessionId}&token=${userToken}&room=${roomID}`;
-        const vetRedirectURL = `http://localhost:3000/chat?sessionId=${session.sessionId}&token=${vetToken}&room=${roomID}`;
+        const userRedirectURL = `https://call-a-bot-7e963ac3bfd1.herokuapp.com/chat?sessionId=${session.sessionId}&token=${userToken}&room=${roomID}`;
+        const vetRedirectURL = `https://call-a-bot-7e963ac3bfd1.herokuapp.com/chat?sessionId=${session.sessionId}&token=${vetToken}&room=${roomID}`;
         console.log(`Generated redirect URLs: user: ${userRedirectURL}, vet: ${vetRedirectURL}`);
 
         // Create the product in Stripe

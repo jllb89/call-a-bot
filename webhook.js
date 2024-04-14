@@ -22,7 +22,7 @@ router.post('/', express.raw({ type: 'application/json' }), async (request, resp
         const paymentIntentId = session.payment_intent;
         const userEmail = session.customer_details.email;
         const userName = session.customer_details.name;
-        const vetPhoneNumber = session.metadata.vetPhoneNumber; // Use vetPhoneNumber
+        const vetPhoneNumber = session.metadata.vetPhoneNumber;
         const paymentLinkId = session.payment_link;
         const transaction = await fetchTransaction(sessionId);
 
@@ -40,10 +40,10 @@ router.post('/', express.raw({ type: 'application/json' }), async (request, resp
         }
 
         // Create a customer record
-        createCustomer(vetPhoneNumber, userName, userEmail); // Adjusted to use vetPhoneNumber
+        createCustomer(vetPhoneNumber, userName, userEmail);
 
         // Send a payment link message to the vet
-        sendVetPaymentLink(vetPhoneNumber, sessionId); // Adjusted to use vetPhoneNumber
+        sendVetPaymentLink(vetPhoneNumber, sessionId);
     }
 
     response.json({ received: true });
