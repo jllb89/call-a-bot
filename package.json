@@ -12,7 +12,7 @@
     "npm": "10.4.x"
   },
   "keywords": ["vet", "whatsapp", "remote assistance", "chatbot"],
-  "author": "Your Name",
+  "author": "@_chinocabron",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.7",
