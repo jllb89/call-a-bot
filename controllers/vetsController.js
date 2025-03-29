@@ -67,7 +67,7 @@ async function sendVetPaymentLink(vetPhoneNumber, sessionId) {
         console.log(`Room ID in sendVetPaymentLink: ${roomID}`); // Log the roomID
 
         // Append the vet query parameter to the URL
-        const vetURL = `https://call-a-bot-7e963ac3bfd1.herokuapp.com/redirect?room=${roomID}&vet=true`;
+        const vetURL = `https://call-a-bot.onrender.com/redirect?room=${roomID}&vet=true`;
 
         const message = `Hola Dr.,\n\nEl cliente ha completado el pago. Puede iniciar la consulta por videollamada a través de este enlace: ${vetURL}\n\nAtentamente,\nSu Asistente Call a Vet`;
         console.log(`Vet payment link message: ${message}`);

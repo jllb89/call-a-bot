@@ -35,7 +35,7 @@ async function handleWhatsAppMessage(req, res) {
             body: openAIResponse,
             from: 'whatsapp:' + process.env.TWILIO_WHATSAPP_NUMBER,
             to: 'whatsapp:' + phoneNumber,
-            statusCallback: 'https://call-a-bot-7e963ac3bfd1.herokuapp.com/message-status'  // Endpoint to receive status updates
+            statusCallback: 'https://call-a-bot.onrender.com/message-status'  // Endpoint to receive status updates
         };
         
         // Send the message via Twilio and handle delivery status
